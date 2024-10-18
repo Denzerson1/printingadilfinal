@@ -4,22 +4,13 @@ import Footer from '../../components/Footer';
 import backgroundImage from '../../images/dtfmain.jpg';
 import ScrollToTop from '../../components/ScrollToTop';
 
+import img1 from '../../images/dtf/1.png';
+import img2 from '../../images/dtf/2.png';
+import img3 from '../../images/dtf.jpg';
+
 function DieCutMattPantone() {
-    const images = [
-        'https://via.placeholder.com/400x500?text=Image+1', // replace with actual image URLs
-        'https://via.placeholder.com/400x500?text=Image+2',
-        'https://via.placeholder.com/400x500?text=Image+3'
-    ];
-
+    const images = [img1, img2,img3];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 2000); // Change image every 2 seconds
-
-        return () => clearInterval(interval);
-    }, [images.length]);
 
     const handlePrevious = () => {
         setCurrentImageIndex((prevIndex) =>
@@ -62,18 +53,17 @@ function DieCutMattPantone() {
                     </div>
                 </nav>
 
-
-                <div className="max-w-5xl mx-auto p-4 md:p-6">
-                    <div className="flex flex-col md:flex-row items-start md:space-x-8">
+                {/* Main Content */}
+                <div className="max-w-7xl mx-auto p-4 md:p-6">
+                    <div className="flex flex-col md:flex-row items-start md:space-x-12">
                         {/* Image Section */}
                         <div className="relative flex-1 mb-6 md:mb-0">
-
                             {/* Image Slider */}
                             <div className="relative">
                                 <img
                                     src={images[currentImageIndex]}
                                     alt={`Image ${currentImageIndex + 1}`}
-                                    className="w-full h-auto object-cover rounded-lg shadow-lg"
+                                    className="w-full h-[500px] object-cover rounded-lg shadow-lg"
                                 />
 
                                 {/* Navigation Arrows */}
@@ -94,7 +84,7 @@ function DieCutMattPantone() {
 
                         {/* Description Section */}
                         <div className="flex-1">
-                            <h1 className="text-2xl font-semibold text-gray-900 mb-3">DIE-CUT MATT PANTONE</h1>
+                            <h1 className="text-2xl font-semibold text-gray-900 mb-3">DTF Transfers</h1>
 
                             <p className="text-sm text-gray-700 mb-2">
                                 This monochrome marking process allows you to make transfers in your choice of Pantone colour, or any other colour reference (including fluo).
@@ -103,12 +93,12 @@ function DieCutMattPantone() {
                                 The desired colour is prepared in-house by our technicians.
                             </p>
 
-                            <h2 className="text-lg font-medium text-gray-800 mb-3">The multiple advantages of Die-Cut Matt Pantone transfers are:</h2>
+                            <h2 className="text-lg font-medium text-gray-800 mb-3">The multiple advantages Direct To Film transfers are:</h2>
                             <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mb-3">
                                 <li>Implementation of your chosen colours</li>
                                 <li>Perfect cut-out</li>
                                 <li>Stretchable</li>
-                                <li>Ready to apply (pre-trimmed)</li>
+                                <li>Ready and easy to apply (pre-trimmed)</li>
                                 <li>Washable at 60°C (140°F)</li>
                                 <li>Choice of packaging: Per unit or on a roll</li>
                                 <li>OEKO-TEX® STANDARD 100 certificat N° CQ 580/2 IFTH certified</li>

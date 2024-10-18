@@ -16,8 +16,9 @@ function App() {
                 <Header />
                 <Slideshow />
                 <Richtext />
-                <Partners />
                 <Showcase />
+                <Partners />
+                
                 <YourProject />
                 <Advantages />
                 <Footer />
